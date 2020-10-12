@@ -14,9 +14,9 @@ class App extends React.Component {
     render(){
         return (
             <div className='container'>
-                <Square key={this.state.color} color={this.state.color} />
+                <Square color={this.state.color} />
                 {['blue', 'red', 'green'].map((cor) => 
-                    <LikeButton handleClick={()=>{ this.setState({color: cor})}} >{cor}</LikeButton>  
+                    <LikeButton key={cor} handleClick={()=>{ this.setState({color: cor})}} >{cor}</LikeButton>  
                 )}
                 
             </div>
